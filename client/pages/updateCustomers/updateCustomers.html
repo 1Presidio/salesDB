@@ -1,0 +1,24 @@
+<template name ="updateCustomers">
+  <h1 class = "customerEditTitle">
+    Update iHealth Customer Profile
+  </h1>
+  <div class = "row">
+    <div class = "col-lg-2">
+    </div>
+    <div class = "col-lg-8 centerDiv">
+      <div class ="customerName" id ="customerName">
+        <button style="margin:7px 15px 17px 0;" type="button" class="btn btn-primary" id = "infoButton">What do I fill out?</button>
+  {{#autoForm id="customersName" type="update" doc=salesDoc collection="customers"}}
+
+          {{> afQuickField name="customerName" class="centerDiv"}}
+          {{> afQuickField name="description" rows=4}}
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="reset" class="btn btn-primary">Reset</button>
+  <a href="/sales/customers/viewAll"><button type = "reset" class= "btn btn-primary">Return</button></a>
+
+  {{/autoForm}}
+</div>
+</div>
+</div>
+</template>

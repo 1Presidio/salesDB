@@ -1,0 +1,16 @@
+<template name ="customersList">
+  <h1 class = "customerTitle">
+    iHealth Customers
+  </h1>
+  <div class = "row">
+    <div class = "col-lg-2">
+    </div>
+    <div class = "col-lg-8">
+<div class ="customerTable" id ="customerTable">
+{{> reactiveTable class="table table-reflow tableColor" collection=customers settings=settings}}
+<a href="/sales/customers"><button class = "return">Return</button></a>
+</div>
+</div>
+</div>
+<hr>
+</template>

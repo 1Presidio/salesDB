@@ -1,0 +1,15 @@
+<template name ="salesDataView">
+  <h1 class = "customerTitle">
+    iHealth Sales Transactions
+  </h1>
+  <div class = "row">
+    <div class = "col-lg-2">
+    </div>
+    <div class = "col-lg-8">
+<div class ="salesTable" id ="salesTable">
+{{> reactiveTable class = "table table-reflow tableColor" collection=salesCollection settings=settings}}
+</div>
+</div>
+</div>
+<hr>
+</template>

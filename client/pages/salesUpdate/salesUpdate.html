@@ -1,0 +1,23 @@
+<template name ="salesDataViewEdit">
+  <h1 class = "salesEditTitle">
+    Update iHealth Previous Sales Transactions
+  </h1>
+  <div class = "row">
+    <div class = "col-lg-2">
+    </div>
+    <div class = "col-lg-8 centerDiv">
+      <div class ="salesTableUpdate" id ="salesTableUpdate">
+        <button style="margin:7px 15px 17px 0;" type="button" class="btn btn-primary" id = "infoButton">What do I fill out?</button>
+  {{#autoForm id="salesTransaction" type="update" doc=salesDoc collection="salesDataView"}}
+
+  {{> reactiveTable class = "table table-reflow tableColor" collection=salesCollection settings=settings}}
+s
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="reset" class="btn btn-primary">Reset</button>
+
+  {{/autoForm}}
+</div>
+</div>
+</div>
+</template>

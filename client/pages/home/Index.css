@@ -1,0 +1,10 @@
+h1.errorPage  {
+  text-align: center;
+  color: white;
+}
+
+h2.error404   {
+  text-align: center;
+  color: white;
+  margin: 5%
+}

@@ -1,0 +1,23 @@
+<template name = "postCustomers">
+<h1 class = "customerTitle">Customer Setup Sheet</h1>
+
+
+
+
+  <div name = "customers" class = "row">
+    <div class = "col-lg-2"> </div>
+      <div class = "col-lg-8 centerDiv">
+        <button style="margin:7px 15px 17px 0;" type="button" class="btn btn-primary" id = "helpButton">What do I fill out?</button>
+
+  {{#autoForm id="customersName" type="insert" collection="customers"}}
+
+          {{> afQuickField name="customerName" class="centerDiv"}}
+          {{> afQuickField name="description" rows=4}}
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="reset" class="btn btn-primary">Reset</button>
+  <a href = "/sales"><button type="return" class="btn btn-primary buttonReturn>">Return</button></a>
+  {{/autoForm}}
+  </div>
+  </div>
+</template>

@@ -1,0 +1,56 @@
+<head>
+  <title>Sales Analysis</title>
+  <link rel="icon" type="img/ico" href="https://upload.wikimedia.org/wikipedia/commons/e/e7/H_Logo.jpg"/>
+</head>
+
+
+<template name = "anythingelse">
+<div class ="centerDiv"> {{>sales}}  </div>
+</template>
+
+<template name="sales">
+  <div class="formContainer centerDiv">
+  {{>uploadTitle}}
+  {{#autoForm id="insertForm" type="insert" collection="Docs"}}
+  {{> afQuickField name="name"}}
+  {{> afQuickField name="fileId" type="cfs-file" collection="files"}}
+  <button type="submit" class="btn btn-primary">Submit</button>
+  <a href= '/sales'> <button type="return" class="btn btn-primary">Return</button></a>
+  {{/autoForm}}
+  <!-- <div class="progress">
+  <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+    60%
+  </div>
+</div> -->
+  <hr>
+  {{>inputTitle}}
+  {{#autoForm id="postSalesRecord" type="insert" collection="salesRecord"}}
+          {{> afQuickField name="customerName" options=customerSel}}
+          {{> afQuickField name="itemName"}}
+          {{> afQuickField name="qtySold"}}
+          {{> afQuickField name="qtyReturned"}}
+          {{> afQuickField name="dateOfTransaction"}}
+          {{> afQuickField name="notes"}}
+  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="reset" class="btn btn-primary">Reset</button>
+  <a href="/sales/customers"><button type="return" class="btn btn-primary">Add New Customer</button></a>
+  {{/autoForm}}
+  </div>
+
+</template>
+
+<template name = "uploadTitle">
+  <h2 class = 'uploadTitle'>Submit a Sales CSV file for Analysis</h2>
+</template>
+
+<template name = "inputTitle">
+  <h2 class = 'inputTitle'>Manually Input a Sale </h2>
+</template>
+
+
+
+
+<!-- Loading Icon -->
+<template name = "loadingIcon">
+<div class="loading">Loading&#8230;</div>
+</template>
